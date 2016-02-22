@@ -9,8 +9,8 @@ import java.io.*;
 import banking.primitive.core.Account.State;
 
 class ServerSolution implements AccountServer {
-
-	static String fileName = "accounts.ser";
+	/*thhussei - Issue: 3*/
+	private static String fileName = "accounts.ser";
 
 	Map<String,Account> accountMap = null;
 
