@@ -1,19 +1,21 @@
+/*
+  File:	Main.java
+  Author:	@author kevinagary
+  Date:	2/22/2016
+
+  Description: Contains main method for running the program.
+*/
 package banking.gui;
 
 import javax.swing.JFrame;
 
-/**
- * main method for running the program.
- * @author kevinagary
- *
- */
 final class Main {
 	/**
 	 * Private constructor to address STYLE issue.
 	 */
 	private Main() {
 	}
-	
+
 	/**
 	 * All methods should have a Javadoc according to STYLE.
 	 * @param args command-line arguments
