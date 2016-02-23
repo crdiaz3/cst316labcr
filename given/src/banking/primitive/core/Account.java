@@ -48,7 +48,7 @@ public abstract class Account implements java.io.Serializable {
      /**
         Method: Takes money out of an account. If the balance falls below 0 then
                 the account is moved to an OVERDRAWN state
-        Inputs: @param parameter: amount is a withdrawal and must be > 0
+        Inputs: @param amount is a withdrawal and must be > 0
         Returns:@return true if the deposit was successful, false if not due to
                 amount or invalid state
 ​
