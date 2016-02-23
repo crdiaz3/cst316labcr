@@ -1,3 +1,10 @@
+/*
+  File:	Savings.java
+  Author:	@author kevinagary
+  Date:	2/22/2016
+
+  Description: Extends abstract class Account.
+*/
 package banking.primitive.core;
 
 public class Savings extends Account {
@@ -43,7 +50,7 @@ public class Savings extends Account {
 		}
 		return false;
 	}
-	
+
 	public String getType() { return "Checking"; }
 
 	public String toString() {
