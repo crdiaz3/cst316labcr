@@ -1,10 +1,17 @@
+/*
+  File:	Checkings.java
+  Author:	@author kevinagary
+  Date:	2/22/2016
+
+  Description: Extends abstract class Account.
+*/
 package banking.primitive.core;
 
 public class Checking extends Account {
 
 	private static final long serialVersionUID = 11L;
 	private int numWithdraws = 0;
-	
+
 	private Checking(String name) {
 		super(name);
 	}
@@ -33,11 +40,11 @@ public class Checking extends Account {
 	}
 
 	/**
-	 * Withdrawal. After 10 withdrawals a fee of $2 is charged per transaction You may 
+	 * Withdrawal. After 10 withdrawals a fee of $2 is charged per transaction You may
 	 * continue to withdraw an overdrawn account until the balance is below -$100
 	 */
 	public boolean withdraw(float amount) {
-		if (amount > 0.0f) {		
+		if (amount > 0.0f) {
 			// KG: incorrect, last balance check should be >=
 			if (getState() == State.OPEN || (getState() == State.OVERDRAWN && balance > -100.0f)) {
 				balance = balance - amount;
@@ -54,10 +61,10 @@ public class Checking extends Account {
 	}
 
 	/*thhussei - Issue 2*/
-	public String getType() { 
-		return "Checking"; 
+	public String getType() {
+		return "Checking";
 	}
-	
+
 	public String toString() {
 		return "Checking: " + getName() + ": " + getBalance();
 	}

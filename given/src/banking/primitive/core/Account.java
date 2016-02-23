@@ -1,5 +1,24 @@
+/*
+  File:	Account.java
+  Author:	@author kevinagary
+  Date:	2/22/2016
+
+  Description: Contains Abstract Class Account to be extended by Checkings
+               and Savings classes.
+*/
 package banking.primitive.core;
 
+/**
+  Class:	Account
+
+  Description:  Abstract class that models a bank account of two different types: checkings & savings.
+                Members: state, balance, and name.
+                Public Methods: Respective getters and setters,
+                Abstract Methods:  withdraw,
+                                   deposit,
+                                   getType
+
+*/
 public abstract class Account implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -22,17 +41,30 @@ public abstract class Account implements java.io.Serializable {
     }
 
     /**
+     * @return balance in the Account
+     */
+    public final float getBalance() {
+        return balance;
+    }
+
+    /**
      * @return name of the Account
      */
     public final String getName() {
         return name;
     }
 
+    protected final State getState() {
+        return state;
+    }
+
     /**
-     * @return balance in the Account
+     * @return either "Checking" or "Savings"
      */
-    public final float getBalance() {
-        return balance;
+    public abstract String getType();
+
+    protected final void setState(State s) {
+        state = s;
     }
 
     /**
@@ -55,20 +87,8 @@ public abstract class Account implements java.io.Serializable {
         Description: Takes money out of an account. If the balance falls below 0
                      then the account is moved to an OVERDRAWN state
     */
+
     public abstract boolean withdraw(float amount);
-
-    /**
-     * @return either "Checking" or "Savings"
-     */
-    public abstract String getType();
-
-    protected final State getState() {
-        return state;
-    }
-
-    protected final void setState(State s) {
-        state = s;
-    }
 
     public String toString() {
         return "Account " + name + " has $" + balance + "and is " + getState()
