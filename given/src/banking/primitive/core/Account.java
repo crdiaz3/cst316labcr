@@ -77,15 +77,17 @@ public abstract class Account implements java.io.Serializable {
      */
     public abstract boolean deposit(float amount);
 
-    /**
-     * Takes money out of an account. If the balance falls below 0 then the
-     * account is moved to an OVERDRAWN state
-     *
-     * @param parameter
-     *            amount is a withdrawal and must be > 0
-     * @return true if the deposit was successful, false if not due to amount or
-     *         invalid state
-     */
+     /**
+        Method: Takes money out of an account. If the balance falls below 0 then
+                the account is moved to an OVERDRAWN state
+        Inputs: @param amount is a withdrawal and must be > 0
+        Returns:@return true if the deposit was successful, false if not due to
+                amount or invalid state
+​
+        Description: Takes money out of an account. If the balance falls below 0
+                     then the account is moved to an OVERDRAWN state
+    */
+
     public abstract boolean withdraw(float amount);
 
     public String toString() {
