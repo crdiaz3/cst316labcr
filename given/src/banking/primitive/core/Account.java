@@ -1,3 +1,11 @@
+/*
+  File:	Account.java
+  Author:	@author kevinagary
+  Date:	2/22/2016
+
+  Description: Contains Abstract Class Account to be extended by Checkings
+               and Savings classes.
+*/
 package banking.primitive.core;
 
 public abstract class Account implements java.io.Serializable {
@@ -17,7 +25,7 @@ public abstract class Account implements java.io.Serializable {
     }
 
     protected Account(String n, float b) {
-        this(n); 
+        this(n);
         balance = b;
     }
 
@@ -37,7 +45,7 @@ public abstract class Account implements java.io.Serializable {
 
     /**
      * Adds money to an account. May not be done if the account is CLOSED
-     * 
+     *
      * @param parameter
      *            amount is a deposit and must be > 0
      * @return true if the deposit was successful, false if not due to amount or
@@ -48,7 +56,7 @@ public abstract class Account implements java.io.Serializable {
     /**
      * Takes money out of an account. If the balance falls below 0 then the
      * account is moved to an OVERDRAWN state
-     * 
+     *
      * @param parameter
      *            amount is a withdrawal and must be > 0
      * @return true if the deposit was successful, false if not due to amount or
