@@ -8,6 +8,17 @@
 */
 package banking.primitive.core;
 
+/**
+  Class:	Account
+
+  Description:  Abstract class that models a bank account of two different types: checkings & savings.
+                Members: state, balance, and name.
+                Public Methods: Respective getters and setters,
+                Abstract Methods:  withdraw,
+                                   deposit,
+                                   getType
+
+*/
 public abstract class Account implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
